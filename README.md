@@ -12,25 +12,43 @@ yarn dev
 pnpm dev
 # or
 bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+State Management During Quizzes
+Problem: Managing complex quiz state across multiple questions while providing immediate feedback
+Solution: Implemented a comprehensive state object tracking current question, selected answers, and score
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Dynamic Routing
+Problem: Creating category-specific routes with dynamic data
+Solution: Used Next.js dynamic routing with [category] folder structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Data Fetching Strategies
+Problem: Deciding between SSG, SSR, and CSR for different pages
+Solution:
 
-## Learn More
+SSG for home page (static categories)
 
-To learn more about Next.js, take a look at the following resources:
+SSR for category pages (dynamic quizzes)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CSR for quiz interactions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Progress Visualization
+Problem: Showing quiz progress in a user-friendly way
+Solution: Implemented a progress bar that updates in real-time
 
-## Deploy on Vercel
+AI Tool Usage
+During development, I utilized AI coding assistants for:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Generating boilerplate code for API routes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Refactoring components for better performance
+
+Debugging TypeScript type errors
+
+Optimizing Tailwind CSS class usage
+
+Generating mock quiz data
+
+Testing Note
+This project uses App Router and focuses on demonstrating Next.js features. Due to the nature of the assignment and time constraints, unit and functional testing were not implemented.
